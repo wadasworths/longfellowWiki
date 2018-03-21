@@ -2,7 +2,7 @@
 
 #### Java Leetcode刷题
 
-#### MachineLearing 机器学习算法
+#### MachineLearing 机器学习
 
 #### Shell shell编程技巧
 

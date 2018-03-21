@@ -1,4 +1,4 @@
-###psql统计表大小
+### psql统计表大小
 ```
 # 统计出不分区表的大小
 select pg_relation_size('schema.table_name');
