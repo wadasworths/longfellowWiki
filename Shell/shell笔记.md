@@ -81,3 +81,36 @@ crontab使用指南：脚本路径，环境变量。
 */1和*无区别，所以可以省略。这里可以想想，*/2表示能被2整除的时间就好理解了
 ```
 
+### shell配置文件连接数据库
+```
+# 配置文件的写法
+$ cat mysql_conn.cfg
+
+[client]
+user=username
+password=password
+host=localhost
+port=3306
+database=test
+
+shell脚本写法
+mysql_connf='mysql_connf.cfg'
+MYSQL_CONN="mysql --default-extra-file=${mysql_connf}"
+
+${MYSQL_CONN} -N -e "show tables;"
+```
+
+### shell中调用psql的写法
+```
+export password
+# 命令行
+psql -h localhost -U username -p 5433 -d gptest -c ""
+# 文件执行sql
+psql -h localhost -U username -p 5433 -d gptest -c ""
+```
+
+### 互信服务器文件传输
+```
+scp -r file etl@sdw60:/homo/copy
+```
+
