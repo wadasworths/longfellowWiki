@@ -114,3 +114,34 @@ psql -h localhost -U username -p 5433 -d gptest -c ""
 scp -r file etl@sdw60:/homo/copy
 ```
 
+### $
+```
+$0 这个程式的执行名字
+$n 这个程式的第n个参数值，n=1..9
+$* 这个程式的所有参数,此选项参数可超过9个。
+$# 这个程式的参数个数
+$$ 这个程式的PID(脚本运行的当前进程ID号)
+$! 执行上一个背景指令的PID(后台运行的最后一个进程的进程ID号)
+$? 执行上一个指令的返回值 (显示最后命令的退出状态。0表示没有错误，其他任何值表明有错误)
+$- 显示shell使用的当前选项，与set命令功能相同
+$@ 跟$*类似，但是可以当作数组用
+```
+
+
+### 脚本中验证参数
+```
+echo "$0 $@"  # 输出脚本名字  参数
+
+# 判断脚本参数
+if [ $# -lt 1 ] || [ $# -gt 3 ]; then
+   echo "Usage: $0 [options] <data-dir> [<log-dir> [<mfcc-dir>] ]";
+   echo "e.g.: $0 data/train exp/make_mfcc/train mfcc"
+   echo "Note: <log-dir> defaults to <data-dir>/log, and <mfccdir> defaults to <data-dir>/data"
+   echo "Options: "
+   echo "  --mfcc-config <config-file>                      # config passed to compute-mfcc-feats "
+   echo "  --nj <nj>                                        # number of parallel jobs"
+   echo "  --cmd (utils/run.pl|utils/queue.pl <queue opts>) # how to run jobs."
+   echo "  --write-utt2num-frames <true|false>     # If true, write utt2num_frames file."
+   exit 1;
+fi
+```

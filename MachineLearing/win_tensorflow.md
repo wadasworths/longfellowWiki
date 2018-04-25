@@ -144,3 +144,116 @@ The TensorFlow library wasn't compiled to use AVX instructions, but these are av
 ###解决方案
 
 https://blog.csdn.net/chuchus/article/details/51713389
+
+
+https://stackoverflow.com/questions/45952049/tensorflow-library-wasnt-compiled-to-use-sse4-2-avx-avx2-fma-in-pycharm
+
+###Mask R-CNN入门
+
+
+https://blog.csdn.net/happyhorizion/article/details/77894205#coco
+
+https://www.jianshu.com/p/de455d653301
+
+
+###GPU测试
+
+https://blog.csdn.net/louishao/article/details/78827691
+
+
+https://stackoverflow.com/questions/41293077/how-to-compile-tensorflow-with-sse4-2-and-avx-instructions
+
+
+https://www.tensorflow.org/install/install_sources
+
+
+
+-[语音识别](https://blog.csdn.net/snowdroptulip/article/details/78943748)
+http://www.openslr.org/18/
+
+
+###报错六
+ImportError: No module named '_pywrap_tensorflow_internal'
+
+
+https://blog.csdn.net/u010099080/article/details/53418159
+
+
+https://blog.csdn.net/u010099080/article/details/53418159
+
+
+###报错信息
+Traceback (most recent call last):
+  File "C:\Python35\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py", line 18, in swig_import_helper
+    return importlib.import_module(mname)
+  File "C:\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 666, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 577, in module_from_spec
+  File "<frozen importlib._bootstrap_external>", line 903, in create_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+ImportError: DLL load failed: 找不到指定的模块。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python35\lib\site-packages\tensorflow\python\pywrap_tensorflow.py", line 41, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "C:\Python35\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py", line 21, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "C:\Python35\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py", line 20, in swig_import_helper
+    return importlib.import_module('_pywrap_tensorflow_internal')
+  File "C:\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+ImportError: No module named '_pywrap_tensorflow_internal'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Python35\lib\site-packages\tensorflow\__init__.py", line 24, in <module>
+    from tensorflow.python import *
+  File "C:\Python35\lib\site-packages\tensorflow\python\__init__.py", line 49, in <module>
+    from tensorflow.python import pywrap_tensorflow
+  File "C:\Python35\lib\site-packages\tensorflow\python\pywrap_tensorflow.py", line 52, in <module>
+    raise ImportError(msg)
+ImportError: Traceback (most recent call last):
+  File "C:\Python35\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py", line 18, in swig_import_helper
+    return importlib.import_module(mname)
+  File "C:\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 666, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 577, in module_from_spec
+  File "<frozen importlib._bootstrap_external>", line 903, in create_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+ImportError: DLL load failed: 找不到指定的模块。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python35\lib\site-packages\tensorflow\python\pywrap_tensorflow.py", line 41, in <module>
+    from tensorflow.python.pywrap_tensorflow_internal import *
+  File "C:\Python35\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py", line 21, in <module>
+    _pywrap_tensorflow_internal = swig_import_helper()
+  File "C:\Python35\lib\site-packages\tensorflow\python\pywrap_tensorflow_internal.py", line 20, in swig_import_helper
+    return importlib.import_module('_pywrap_tensorflow_internal')
+  File "C:\Python35\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+ImportError: No module named '_pywrap_tensorflow_internal'
+
+
+Failed to load the native TensorFlow runtime.
+
+See https://www.tensorflow.org/install/install_sources#common_installation_problems
+
+for some common reasons and solutions.  Include the entire stack trace
+above this error message when asking for help.
+
+###解决方案
+https://stackoverflow.com/questions/42011070/on-windows-running-import-tensorflow-generates-no-module-named-pywrap-tenso
