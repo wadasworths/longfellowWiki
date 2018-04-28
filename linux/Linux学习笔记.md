@@ -29,3 +29,5 @@ passwd username
 
 ### chmod
 权限管理
+
+### $
