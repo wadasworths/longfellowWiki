@@ -1,0 +1,32 @@
+### mysql判断某条记录是否存在的方法
+
+```
+select count(1) from table_name where condition;
+
+#受表大小影响，效率问题
+
+select 1 from table_name where codition limit 1;
+
+###
+
+select * from table_name where codition limit 1;
+
+###
+
+select exists (select * from table_name from codition);
+
+# 只能判断记录是否存在，子查询select * 在执行时会被忽略掉。
+
+### 
+
+其他程序判断。
+```
+
+
+### mysqldump  pg_dump导出表结构及表数据
+```
+pg_dump -h mdw2 -U gpadmin -p 5433 -d pgods -s -t table_name > table_name.sql
+
+```
+
+### JDBC fetch以及betch 

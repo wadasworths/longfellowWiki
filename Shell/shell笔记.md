@@ -1,4 +1,4 @@
-###shell按行处理文件
+### shell按行处理文件
 
 ```bash
 while read line
@@ -7,7 +7,7 @@ do
 done < text.txt
 ```
 
-###awk处理字符串
+### awk处理字符串
 
 ```bash
 str='a b c d'
@@ -20,7 +20,7 @@ echo ${str} | awk ' ' '{print NF}'
 4
 ```
 
-###数组操作
+### 数组操作
 
 ```bash
 length=${#array[@]}
@@ -28,18 +28,18 @@ length=${#array[@]}
 $1=${array[0]}
 ```
 
-###执行在文件中的shell
+### 执行在文件中的shell
 ```bash
 #eval
 eval grep connect ${conf_file}
 ```
 
-###shell正则表达式
+### shell正则表达式
 ```
 "^[A-Za-z]+$.^[A-Za-z0-9]+$"
 ```
 
-###shell定时器crontab
+### shell定时器crontab
 ```
 m h dom mon dow command
 
@@ -107,7 +107,7 @@ export password
 psql -h localhost -U username -p 5433 -d gptest -c ""
 # 文件执行sql
 psql -h localhost -U username -p 5433 -d gptest -c ""
-```
+```/
 
 ### 互信服务器文件传输
 ```
@@ -197,3 +197,42 @@ wait
 exec 3<&-                       # 关闭文件描述符的读
 exec 3>&-                       # 关闭文件描述符的写
 ```
+
+### cat显示指定行
+```
+#从第3000行开始，显示1000行。即显示3000~3999行
+cat filename | tail -n +3000 | head -n 1000
+
+#显示1000行到3000行
+cat filename| head -n 3000 | tail -n +1000
+```
+
+
+
+### 大小写转换
+```
+echo 'stmp' | tr ['a-z'] [A-Z]
+```
+
+### Linux最大进程数，以及open  files 修改
+```
+#查看 当前用户限制 进程文件限制
+
+ulimit -a
+
+cat /etc/security/limits.d/90-nproc.conf  -> 修改进程数
+
+cat /etc/security/limits.conf 
+
+最后添加
+* sort nofile 65535
+* hard nofile 65535
+```
+
+
+### 文件夹授权
+```
+chown etl:etl etl_job/
+chown etl:root etl_job/
+```
+
