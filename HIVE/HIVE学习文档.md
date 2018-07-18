@@ -13,7 +13,8 @@ show create table;
 set hive.exec.dynamic.partition=true;
 set hive.exec.dynamic.partition.mode=nonstrict;
 set hive.execution.engine=mr;
-set mapreduce.input
+set mapreduce.input.fileinputformat.input.dir.recursive=true
+
 ```
 
 ```
@@ -30,6 +31,25 @@ on bb.${part_column}=aa.city.code;
 ```
 
 ### TEZ引擎并发问题
+```
+设置mapreduce引擎
+set hive.execution.engine=mr;
+```
 
 ### sqoop并发问题
 
+```
+常见错误一：
+ulimit -a 查看用户的最大openfiles 和 max processes 这种错误一般会出现fork报错
+
+并发问题二：
+sqoop不能并发执行，需要在cd $JAVA_HOME/jre/lib/security/ 找到java.security文件
+修改其中的：
+securerandom.source=file:/dev/random
+securerandom.source=file:/dev/../dev/urandom
+```
+
+### HIVE外部表递归加载文件夹
+```
+set mapreduce.input.fileinputformat.input.dir.recursive=true
+```
