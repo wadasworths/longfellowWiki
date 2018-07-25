@@ -236,3 +236,4 @@ chown etl:etl etl_job/
 chown etl:root etl_job/
 ```
 
+### rsync+inotify实现服务器之间文件实时同步

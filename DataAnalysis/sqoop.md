@@ -21,3 +21,6 @@ sqoop import -Dorg.apache.sqoop/splitter.allow_text_splitter=true \
 
 ### JDBC SID && service_name
 
+```
+connect="jdbc:oracle:thin:@"
+```
