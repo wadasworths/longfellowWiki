@@ -76,3 +76,8 @@ Abbrev.abbrev(%w{car box cone}, 'ca')
 ```
 http://docs.w3cub.com/ruby~2.5/array/
 ```
+
+
+### ruby中的%w %q %x %r %s
+
+https://www.jianshu.com/p/43c3957eca50
