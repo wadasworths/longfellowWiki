@@ -30,3 +30,28 @@ pg_dump -h mdw2 -U gpadmin -p 5433 -d pgods -s -t table_name > table_name.sql
 ```
 
 ### JDBC fetch以及betch 
+
+
+### MYSQL
+```
+show variables like 'character%'; 
+select version();
+set character_set_results=utf8;
+
+```
+
+
+### ORACLE 执行计划
+```
+https://www.cnblogs.com/Dreamer-1/p/6076440.html
+
+MYSQL
+https://blog.csdn.net/wuseyukui/article/details/71512793
+https://blog.csdn.net/heng_yan/article/details/78324176
+```
+
+
+### PSQL
+```
+psql: FATAL: the database system is starting up
+```

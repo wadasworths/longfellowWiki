@@ -237,3 +237,10 @@ chown etl:root etl_job/
 ```
 
 ### rsync+inotify实现服务器之间文件实时同步
+
+```
+
+https://www.jb51.net/article/57011.htm
+```
+
+### centos搭建ftp
