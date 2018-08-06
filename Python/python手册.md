@@ -13,6 +13,7 @@ virtualenv -p 解释器路径 虚拟环境名称 --no-site-packages
 不安装系统python安装包的安装环境
 ```
 
+<<<<<<< HEAD
 ### Built in Types (内置类型)
 
 The principal built-in types are numerics, sequences, mappings, classes, instances and exceptions.
@@ -40,3 +41,6 @@ https://www.cnblogs.com/mrchige/p/6389588.html
 ruby中的ActiveRecord
 python中的SQLAlchemy
 ```
+=======
+
+>>>>>>> 1c6f1c98ef67cba5e67c2d4b22a22542b0820eb3
