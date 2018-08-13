@@ -241,6 +241,12 @@ chown etl:root etl_job/
 ```
 
 https://www.jb51.net/article/57011.htm
+https://www.ibm.com/developerworks/cn/linux/l-ubuntu-inotify/index.html
+
+
+client 192.168.45.138 
+server 120.78.90.115
+
 ```
 
 ### centos搭建ftp

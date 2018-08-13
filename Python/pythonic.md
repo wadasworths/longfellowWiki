@@ -22,7 +22,7 @@ for k, v in enumerate(num_list):
 
 # 打开文件
 
-with open('filename') as txt:
+with open('filename') as f:
 	date = f.read()
 
 # 使用with，Python将自动管理文件流的打开与关闭，无需手动操作。
