@@ -28,3 +28,9 @@ with open('filename') as f:
 # 使用with，Python将自动管理文件流的打开与关闭，无需手动操作。
 
 ```
+
+#### List可修改对象，
+```
+
+
+```

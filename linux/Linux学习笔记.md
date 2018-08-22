@@ -1,4 +1,4 @@
-###nc
+### nc
 
 ```
 yum install nc
@@ -8,13 +8,13 @@ nc -lk 7777
 nc hostname 777
 ```
 
-###-r
+### -r
 ```
 # 文件夹递归处理
 cp -r [源文件] [目标文件目录]
 ```
 
-###grep 
+### grep 
 ```
 ps -ef | grep *** | grep -v grep
 
@@ -30,4 +30,7 @@ passwd username
 ### chmod
 权限管理
 
-### $
+### 进程的R S D T Z X
+```
+https://blog.csdn.net/nilxin/article/details/7437671
+```

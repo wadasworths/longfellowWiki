@@ -18,5 +18,9 @@ select * from pg_stat_activity;
 
 ```
 select a.relname fron pg_class a ,pg_locks b where a.oid=b.relation;
+
+查看pid
+
+select b.* from pg_class a ,pg_locks b where a.oid=b.relation;
 ```
 

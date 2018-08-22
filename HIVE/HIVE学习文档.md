@@ -53,3 +53,24 @@ securerandom.source=file:/dev/../dev/urandom
 ```
 set mapreduce.input.fileinputformat.input.dir.recursive=true
 ```
+
+### HIVE文件格式
+```
+https://blog.csdn.net/hereiskxm/article/details/42171325
+https://www.cnblogs.com/tlnshuju/p/7255509.html
+```
+
+ORCFILE
+SEQUENCEFILE
+RCFFILE
+TEXTFILE 为默认格式，建表时不指定默认为这个格式，导入数据时会直接把数据文件拷贝到hdfs上不进行处理；
+
+```sql
+# HIVE外部表
+CREATE EXTERNAL TABLE 
+  IF NOT EXISTS table_name (column type) 
+STORED AS TEXTFILE location '/user/hive/warehouse/';
+
+# HIVE内部表
+
+```

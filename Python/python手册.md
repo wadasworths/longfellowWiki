@@ -224,3 +224,13 @@ if __name__ == 'main':
 
 # 多个装饰器的解析
 ```
+
+### Sequence type --list tuples range object
+
+python中三种基本的Sequence类型  lists, tuples, and range objects
+
+```python
+x in s
+x not in s
+
+```
