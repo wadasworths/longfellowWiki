@@ -234,3 +234,61 @@ x in s
 x not in s
 
 ```
+
+
+### super方法，MRO方法解析顺序
+
+[相关阅读：http://python.jobbole.com/86787/](http://python.jobbole.com/86787/)
+[官方文档：https://www.python.org/download/releases/2.3/mro/](https://www.python.org/download/releases/2.3/mro/)
+```python
+
+class Base(object):
+    def __init__(self):
+        print("enter base class")
+        print("leave base class")
+        
+class A(Base):
+    def __init__(self):
+        print("enter A class")
+        super().__init__()
+        print("leave A class")
+        
+class B(Base):
+    def __init__(self):
+        print("enter B class")
+        super().__init__()
+        print("leave B class")
+
+class C(A, B):
+    def __init__(self):
+         print("enter C class")
+         super().__init__()
+         print("enter C class")
+
+c = C()
+
+"""
+输出
+
+enter C class
+enter A class
+enter B class
+enter base class
+leave base class
+leave B class
+leave A class
+enter C class
+"""
+
+print(C.mro())
+
+"""
+[<class '__main__.C'>, <class '__main__.A'>, <class '__main__.B'>, <class '__main__.Base'>, <class 'object'>]
+"""
+```
+
+方法解析顺序，代表了类继承的顺序，一个类的 MRO 列表就是合并所有父类的 MRO 列表：
+1.子类永远在父类前面
+2.如果有多个父类，会根据它们在列表中的顺序被检查
+3.如果对下一个类存在两个合法的选择，选择第一个父类
+
