@@ -1,6 +1,6 @@
 
 ### Pythonic python之禅
-```
+```python
 # 隐藏的空列表，list式布尔类型
 
 a = []
@@ -33,4 +33,20 @@ with open('filename') as f:
 ```
 
 
+```
+
+#### 字典按key value排序
+```python
+x = {1: 2, 3: 4, 4:3, 2:1, 0:0}
+
+import operator
+
+# 按value排序
+sorted_x = sorted(x.items(), key=operator.itemgetter(1))
+
+# 按key排序
+sorted_x = sorted(x.items(), key=lambda x: x[0])
+
+sorted(x.items(), key=lambda x: x[0])
+sorted(x.items(), key=lambda x: x[1])
 ```
