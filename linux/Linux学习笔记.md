@@ -34,3 +34,14 @@ passwd username
 ```
 https://blog.csdn.net/nilxin/article/details/7437671
 ```
+
+
+### linux用户管理
+```sh
+useradd -d /home/longfellow -m -s /bin/bash longfellow
+gpasswd –a longfellow sudo
+passwd longfellow
+# https://blog.csdn.net/baidu_35679960/article/details/78752591
+```
+
+###

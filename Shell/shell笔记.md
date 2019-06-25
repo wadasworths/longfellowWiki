@@ -250,3 +250,27 @@ server 120.78.90.115
 ```
 
 ### centos搭建ftp
+
+
+
+### date
+```
+date 
+```
+
+### centos 7端口
+```
+firewall-cmd --list-ports # 查看开放端口
+
+# 开放端口
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+
+# 防火墙重启
+firewall-cmd reload
+
+# 关闭防火墙
+systemctl stop firewalld.service
+
+# 禁止防火墙开机启动
+systemctl disable firewalld.service
+```
